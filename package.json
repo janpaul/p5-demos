@@ -2,7 +2,6 @@
   "name": "testp5",
   "version": "1.0.0",
   "license": "MIT",
-  "types": "dist/index.d.ts",
   "dependencies": {
     "autoprefixer": "^10.4.2",
     "p5": "^1.4.1",
