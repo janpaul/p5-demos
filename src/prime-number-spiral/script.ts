@@ -1,13 +1,9 @@
 import p5 from "p5";
 
-const isPrime = (n: number): boolean => {
-  if (n === 1) return false;
-  for (let i = 2; i <= Math.sqrt(n); i++) {
-    if (n % i === 0) {
-      return false;
-    }
-  }
-  return true;
+const isPrime = (num: number): boolean => {
+  for(let i = 2, s = Math.sqrt(num); i <= s; i++)
+    if(num % i === 0) return false;
+  return num > 1;
 };
 
 new p5(p => {
@@ -18,6 +14,7 @@ new p5(p => {
   let state = 0;
   let turnCounter = 0;
   let totalSteps;
+
   p.setup = function() {
     p.createCanvas(p.windowWidth, p.windowHeight);
     x = p.width / 2;
